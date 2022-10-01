@@ -23,7 +23,7 @@ export class BakubakuStack extends cdk.Stack {
       compatibleRuntimes: [lambda.Runtime.PYTHON_3_9],
     });
 
-    // Lambda Layer fitbit
+    // Lambda Layer common
     const common_layer = new lambda.LayerVersion(this, 'CommonLayer', {
       removalPolicy: RemovalPolicy.RETAIN,
       code: lambda.Code.fromAsset('lambda/common-layer'),
